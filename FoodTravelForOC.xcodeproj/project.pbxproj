@@ -1,0 +1,757 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F0318681CC1493600C54801 /* WelcomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0318671CC1493600C54801 /* WelcomePageViewController.m */; };
+		3F03186B1CC14EEB00C54801 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F03186A1CC14EEB00C54801 /* WelcomeViewController.m */; };
+		3F0318751CC1D84400C54801 /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0318741CC1D84400C54801 /* TabViewController.m */; };
+		3F074E5A1CBC06CA00189688 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F074E591CBC06CA00189688 /* main.m */; };
+		3F074E5C1CBCA15B00189688 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F074E5B1CBCA15B00189688 /* CoreData.framework */; };
+		3F074E5F1CBCA21500189688 /* FoodTravelForOC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F074E5D1CBCA21500189688 /* FoodTravelForOC.xcdatamodeld */; };
+		3F074E9F1CBCB0AB00189688 /* Food+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F074E9C1CBCB0AB00189688 /* Food+CoreDataProperties.m */; };
+		3F074EA01CBCB0AB00189688 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F074E9E1CBCB0AB00189688 /* Food.m */; };
+		3F074EA61CBCB4ED00189688 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F074EA51CBCB4ED00189688 /* Account.m */; };
+		3F074EA91CBCBD7E00189688 /* SignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F074EA81CBCBD7E00189688 /* SignViewController.m */; };
+		3F074EAF1CBD3B8F00189688 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F074EAE1CBD3B8F00189688 /* Discover.storyboard */; };
+		3F074EBA1CBDE1DF00189688 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F074EB91CBDE1DF00189688 /* More.storyboard */; };
+		3F074EBD1CBDE21E00189688 /* MoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F074EBC1CBDE21E00189688 /* MoreTableViewController.m */; };
+		3F074ECB1CBE300000189688 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F074ECA1CBE300000189688 /* Main.storyboard */; };
+		3F074ECE1CBE4C0500189688 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F074ECD1CBE4C0500189688 /* WebViewController.m */; };
+		3F074ED11CBE525900189688 /* FoodFromLeanClound.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F074ED01CBE525900189688 /* FoodFromLeanClound.m */; };
+		3F074F101CBEB91C00189688 /* FoodCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F074F0F1CBEB91C00189688 /* FoodCollectionViewCell.m */; };
+		3F074F131CBF358000189688 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F074F121CBF358000189688 /* DiscoverViewController.m */; };
+		3F074F1A1CC0A9E700189688 /* WeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F074F191CC0A9E400189688 /* WeatherModel.m */; };
+		3F074F1D1CC0B18100189688 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F074F1C1CC0B18100189688 /* WeatherViewController.m */; };
+		3F074F201CC0B68B00189688 /* LocationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F074F1F1CC0B68B00189688 /* LocationTableViewController.m */; };
+		3F298ED71CC3DB9800225218 /* FoodTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F298ED61CC3DB9500225218 /* FoodTableViewCell.m */; };
+		3F298EDA1CC3DF0E00225218 /* FoodTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F298ED91CC3DF0E00225218 /* FoodTableViewController.m */; };
+		3F298EE91CC4DB5500225218 /* AddTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F298EE81CC4DB5500225218 /* AddTableViewController.m */; };
+		3F298EF41CC63B1200225218 /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F298EF31CC63B1100225218 /* DetailTableViewCell.m */; };
+		3F298EF71CC63BE900225218 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F298EF61CC63BE900225218 /* DetailViewController.m */; };
+		3F298EFA1CC6580900225218 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F298EF91CC6580900225218 /* MapViewController.m */; };
+		3F298EFD1CC6593400225218 /* ReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F298EFC1CC6593400225218 /* ReviewViewController.m */; };
+		3F98CD801CBA8FB20059AAB3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F98CD7F1CBA8FB20059AAB3 /* AppDelegate.m */; };
+		3F98CD881CBA8FB20059AAB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F98CD871CBA8FB20059AAB3 /* Assets.xcassets */; };
+		3FB11F881CC6A1C100DADE85 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB11F871CC6A1C100DADE85 /* MapKit.framework */; };
+		3FB11F8B1CC7961100DADE85 /* LauchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB11F8A1CC7961100DADE85 /* LauchViewController.m */; };
+		D0DE3081A5E48D0FF025A0B6 /* Pods_FoodTravelForOC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F1D5BCD11C7D15372ADE374 /* Pods_FoodTravelForOC.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0BB8058A21424F43B4FA4426 /* Pods-FoodTravelForOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTravelForOC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodTravelForOC/Pods-FoodTravelForOC.debug.xcconfig"; sourceTree = "<group>"; };
+		3F0318661CC1493600C54801 /* WelcomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomePageViewController.h; sourceTree = "<group>"; };
+		3F0318671CC1493600C54801 /* WelcomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomePageViewController.m; sourceTree = "<group>"; };
+		3F0318691CC14EEB00C54801 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		3F03186A1CC14EEB00C54801 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		3F0318731CC1D84400C54801 /* TabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabViewController.h; sourceTree = "<group>"; };
+		3F0318741CC1D84400C54801 /* TabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabViewController.m; sourceTree = "<group>"; };
+		3F074E351CBC044800189688 /* FoodTravelForOC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoodTravelForOC-Prefix.pch"; sourceTree = "<group>"; };
+		3F074E591CBC06CA00189688 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3F074E5B1CBCA15B00189688 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3F074E5E1CBCA21500189688 /* FoodTravelForOC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodTravelForOC.xcdatamodel; sourceTree = "<group>"; };
+		3F074E9B1CBCB0AB00189688 /* Food+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Food+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3F074E9C1CBCB0AB00189688 /* Food+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Food+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3F074E9D1CBCB0AB00189688 /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Food.h; sourceTree = "<group>"; };
+		3F074E9E1CBCB0AB00189688 /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Food.m; sourceTree = "<group>"; };
+		3F074EA41CBCB4ED00189688 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		3F074EA51CBCB4ED00189688 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		3F074EA71CBCBD7E00189688 /* SignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignViewController.h; sourceTree = "<group>"; };
+		3F074EA81CBCBD7E00189688 /* SignViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignViewController.m; sourceTree = "<group>"; };
+		3F074EAE1CBD3B8F00189688 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
+		3F074EB91CBDE1DF00189688 /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
+		3F074EBB1CBDE21E00189688 /* MoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTableViewController.h; sourceTree = "<group>"; };
+		3F074EBC1CBDE21E00189688 /* MoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTableViewController.m; sourceTree = "<group>"; };
+		3F074ECA1CBE300000189688 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3F074ECC1CBE4C0500189688 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		3F074ECD1CBE4C0500189688 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		3F074ECF1CBE525900189688 /* FoodFromLeanClound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodFromLeanClound.h; sourceTree = "<group>"; };
+		3F074ED01CBE525900189688 /* FoodFromLeanClound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodFromLeanClound.m; sourceTree = "<group>"; };
+		3F074F0E1CBEB91C00189688 /* FoodCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodCollectionViewCell.h; sourceTree = "<group>"; };
+		3F074F0F1CBEB91C00189688 /* FoodCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodCollectionViewCell.m; sourceTree = "<group>"; };
+		3F074F111CBF358000189688 /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
+		3F074F121CBF358000189688 /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
+		3F074F181CC0A9E400189688 /* WeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherModel.h; sourceTree = "<group>"; };
+		3F074F191CC0A9E400189688 /* WeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherModel.m; sourceTree = "<group>"; };
+		3F074F1B1CC0B18100189688 /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
+		3F074F1C1CC0B18100189688 /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
+		3F074F1E1CC0B68B00189688 /* LocationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTableViewController.h; sourceTree = "<group>"; };
+		3F074F1F1CC0B68B00189688 /* LocationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTableViewController.m; sourceTree = "<group>"; };
+		3F298ED51CC3DB9500225218 /* FoodTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodTableViewCell.h; sourceTree = "<group>"; };
+		3F298ED61CC3DB9500225218 /* FoodTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodTableViewCell.m; sourceTree = "<group>"; };
+		3F298ED81CC3DF0E00225218 /* FoodTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodTableViewController.h; sourceTree = "<group>"; };
+		3F298ED91CC3DF0E00225218 /* FoodTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodTableViewController.m; sourceTree = "<group>"; };
+		3F298EE71CC4DB5500225218 /* AddTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTableViewController.h; sourceTree = "<group>"; };
+		3F298EE81CC4DB5500225218 /* AddTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTableViewController.m; sourceTree = "<group>"; };
+		3F298EF21CC63B1100225218 /* DetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewCell.h; sourceTree = "<group>"; };
+		3F298EF31CC63B1100225218 /* DetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewCell.m; sourceTree = "<group>"; };
+		3F298EF51CC63BE900225218 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		3F298EF61CC63BE900225218 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		3F298EF81CC6580900225218 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		3F298EF91CC6580900225218 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		3F298EFB1CC6593400225218 /* ReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewViewController.h; sourceTree = "<group>"; };
+		3F298EFC1CC6593400225218 /* ReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewViewController.m; sourceTree = "<group>"; };
+		3F98CD781CBA8FB10059AAB3 /* FoodTravelForOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTravelForOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F98CD7E1CBA8FB20059AAB3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3F98CD7F1CBA8FB20059AAB3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3F98CD871CBA8FB20059AAB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F98CD8C1CBA8FB20059AAB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FB11F871CC6A1C100DADE85 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3FB11F891CC7961100DADE85 /* LauchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LauchViewController.h; sourceTree = "<group>"; };
+		3FB11F8A1CC7961100DADE85 /* LauchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LauchViewController.m; sourceTree = "<group>"; };
+		6F1D5BCD11C7D15372ADE374 /* Pods_FoodTravelForOC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodTravelForOC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2F1AF726AA48B47E6365D43 /* Pods-FoodTravelForOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTravelForOC.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodTravelForOC/Pods-FoodTravelForOC.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F98CD751CBA8FB10059AAB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F074E5C1CBCA15B00189688 /* CoreData.framework in Frameworks */,
+				3FB11F881CC6A1C100DADE85 /* MapKit.framework in Frameworks */,
+				D0DE3081A5E48D0FF025A0B6 /* Pods_FoodTravelForOC.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1132B2563828DB9E3C635143 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0BB8058A21424F43B4FA4426 /* Pods-FoodTravelForOC.debug.xcconfig */,
+				C2F1AF726AA48B47E6365D43 /* Pods-FoodTravelForOC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3F03185B1CC13F1000C54801 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3F074EC71CBDE3B900189688 /* Model */,
+				3F074EC81CBDE3BF00189688 /* View */,
+				3F074EC91CBDE3C400189688 /* Controller */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		3F03185C1CC13F5200C54801 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3F074EC21CBDE36300189688 /* View */,
+				3F074EC31CBDE36500189688 /* Model */,
+				3F074EC11CBDE36000189688 /* Controller */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		3F0318611CC1402000C54801 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3F074EC51CBDE37F00189688 /* View */,
+				3F074EC41CBDE37900189688 /* Model */,
+				3F074EC61CBDE38400189688 /* Controller */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		3F0318621CC1402D00C54801 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3F0318631CC1404500C54801 /* View */,
+				3F0318641CC1404C00C54801 /* Model */,
+				3F0318651CC1405100C54801 /* Controller */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		3F0318631CC1404500C54801 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3F0318641CC1404C00C54801 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F074EA41CBCB4ED00189688 /* Account.h */,
+				3F074EA51CBCB4ED00189688 /* Account.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3F0318651CC1405100C54801 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F074EA71CBCBD7E00189688 /* SignViewController.h */,
+				3F074EA81CBCBD7E00189688 /* SignViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3F074EBE1CBDE33D00189688 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3F298EED1CC52B5600225218 /* Detail */,
+				3F03185C1CC13F5200C54801 /* Main */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		3F074EBF1CBDE34000189688 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				3F03185B1CC13F1000C54801 /* Main */,
+				3F074F141CC0A98400189688 /* Weather */,
+			);
+			name = Discover;
+			sourceTree = "<group>";
+		};
+		3F074EC01CBDE34100189688 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				3F0318621CC1402D00C54801 /* Login */,
+				3F0318611CC1402000C54801 /* Main */,
+			);
+			name = More;
+			sourceTree = "<group>";
+		};
+		3F074EC11CBDE36000189688 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F0318731CC1D84400C54801 /* TabViewController.h */,
+				3F0318741CC1D84400C54801 /* TabViewController.m */,
+				3FB11F891CC7961100DADE85 /* LauchViewController.h */,
+				3FB11F8A1CC7961100DADE85 /* LauchViewController.m */,
+				3F298EE71CC4DB5500225218 /* AddTableViewController.h */,
+				3F298EE81CC4DB5500225218 /* AddTableViewController.m */,
+				3F298ED81CC3DF0E00225218 /* FoodTableViewController.h */,
+				3F298ED91CC3DF0E00225218 /* FoodTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3F074EC21CBDE36300189688 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F298ED51CC3DB9500225218 /* FoodTableViewCell.h */,
+				3F298ED61CC3DB9500225218 /* FoodTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3F074EC31CBDE36500189688 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F074E9B1CBCB0AB00189688 /* Food+CoreDataProperties.h */,
+				3F074E9C1CBCB0AB00189688 /* Food+CoreDataProperties.m */,
+				3F074E9D1CBCB0AB00189688 /* Food.h */,
+				3F074E9E1CBCB0AB00189688 /* Food.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3F074EC41CBDE37900189688 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3F074EC51CBDE37F00189688 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3F074EC61CBDE38400189688 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F074ECC1CBE4C0500189688 /* WebViewController.h */,
+				3F074ECD1CBE4C0500189688 /* WebViewController.m */,
+				3F0318691CC14EEB00C54801 /* WelcomeViewController.h */,
+				3F03186A1CC14EEB00C54801 /* WelcomeViewController.m */,
+				3F074EBB1CBDE21E00189688 /* MoreTableViewController.h */,
+				3F074EBC1CBDE21E00189688 /* MoreTableViewController.m */,
+				3F0318661CC1493600C54801 /* WelcomePageViewController.h */,
+				3F0318671CC1493600C54801 /* WelcomePageViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3F074EC71CBDE3B900189688 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F074ECF1CBE525900189688 /* FoodFromLeanClound.h */,
+				3F074ED01CBE525900189688 /* FoodFromLeanClound.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3F074EC81CBDE3BF00189688 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F074F0E1CBEB91C00189688 /* FoodCollectionViewCell.h */,
+				3F074F0F1CBEB91C00189688 /* FoodCollectionViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3F074EC91CBDE3C400189688 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F074F111CBF358000189688 /* DiscoverViewController.h */,
+				3F074F121CBF358000189688 /* DiscoverViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3F074F141CC0A98400189688 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				3F074F151CC0A98F00189688 /* Model */,
+				3F074F161CC0A99400189688 /* View */,
+				3F074F171CC0A99800189688 /* Controller */,
+			);
+			name = Weather;
+			sourceTree = "<group>";
+		};
+		3F074F151CC0A98F00189688 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F074F181CC0A9E400189688 /* WeatherModel.h */,
+				3F074F191CC0A9E400189688 /* WeatherModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3F074F161CC0A99400189688 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3F074F171CC0A99800189688 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F074F1B1CC0B18100189688 /* WeatherViewController.h */,
+				3F074F1C1CC0B18100189688 /* WeatherViewController.m */,
+				3F074F1E1CC0B68B00189688 /* LocationTableViewController.h */,
+				3F074F1F1CC0B68B00189688 /* LocationTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3F298EED1CC52B5600225218 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				3F298EEF1CC63A8600225218 /* View */,
+				3F298EF01CC63A8B00225218 /* Model */,
+				3F298EF11CC63A9400225218 /* Controller */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		3F298EEF1CC63A8600225218 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F298EF21CC63B1100225218 /* DetailTableViewCell.h */,
+				3F298EF31CC63B1100225218 /* DetailTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3F298EF01CC63A8B00225218 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3F298EF11CC63A9400225218 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F298EF51CC63BE900225218 /* DetailViewController.h */,
+				3F298EF61CC63BE900225218 /* DetailViewController.m */,
+				3F298EF81CC6580900225218 /* MapViewController.h */,
+				3F298EF91CC6580900225218 /* MapViewController.m */,
+				3F298EFB1CC6593400225218 /* ReviewViewController.h */,
+				3F298EFC1CC6593400225218 /* ReviewViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3F98CD6F1CBA8FB10059AAB3 = {
+			isa = PBXGroup;
+			children = (
+				3F98CD7A1CBA8FB20059AAB3 /* FoodTravelForOC */,
+				3F98CD791CBA8FB10059AAB3 /* Products */,
+				1132B2563828DB9E3C635143 /* Pods */,
+				832CA8518ADF38DEDD3F4C00 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3F98CD791CBA8FB10059AAB3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F98CD781CBA8FB10059AAB3 /* FoodTravelForOC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F98CD7A1CBA8FB20059AAB3 /* FoodTravelForOC */ = {
+			isa = PBXGroup;
+			children = (
+				3F074EBE1CBDE33D00189688 /* Main */,
+				3F074EBF1CBDE34000189688 /* Discover */,
+				3F074EC01CBDE34100189688 /* More */,
+				3F98CD871CBA8FB20059AAB3 /* Assets.xcassets */,
+				3F074ECA1CBE300000189688 /* Main.storyboard */,
+				3F074EAE1CBD3B8F00189688 /* Discover.storyboard */,
+				3F074EB91CBDE1DF00189688 /* More.storyboard */,
+				3F98CD7B1CBA8FB20059AAB3 /* Supporting Files */,
+			);
+			path = FoodTravelForOC;
+			sourceTree = "<group>";
+		};
+		3F98CD7B1CBA8FB20059AAB3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3F074E591CBC06CA00189688 /* main.m */,
+				3F98CD8C1CBA8FB20059AAB3 /* Info.plist */,
+				3F98CD7E1CBA8FB20059AAB3 /* AppDelegate.h */,
+				3F98CD7F1CBA8FB20059AAB3 /* AppDelegate.m */,
+				3F074E351CBC044800189688 /* FoodTravelForOC-Prefix.pch */,
+				3F074E5D1CBCA21500189688 /* FoodTravelForOC.xcdatamodeld */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		832CA8518ADF38DEDD3F4C00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FB11F871CC6A1C100DADE85 /* MapKit.framework */,
+				3F074E5B1CBCA15B00189688 /* CoreData.framework */,
+				6F1D5BCD11C7D15372ADE374 /* Pods_FoodTravelForOC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F98CD771CBA8FB10059AAB3 /* FoodTravelForOC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F98CD8F1CBA8FB20059AAB3 /* Build configuration list for PBXNativeTarget "FoodTravelForOC" */;
+			buildPhases = (
+				FA1809B2A43B7AFD681BB164 /* 📦 Check Pods Manifest.lock */,
+				3F98CD741CBA8FB10059AAB3 /* Sources */,
+				3F98CD751CBA8FB10059AAB3 /* Frameworks */,
+				3F98CD761CBA8FB10059AAB3 /* Resources */,
+				CFF23798C07ED3AEB4C0FBCA /* 📦 Embed Pods Frameworks */,
+				DC9913CF927DA84DB14A984C /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FoodTravelForOC;
+			productName = FoodTravelForOC;
+			productReference = 3F98CD781CBA8FB10059AAB3 /* FoodTravelForOC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F98CD701CBA8FB10059AAB3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = angelorlover;
+				TargetAttributes = {
+					3F98CD771CBA8FB10059AAB3 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 8A4QA2H634;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 3F98CD731CBA8FB10059AAB3 /* Build configuration list for PBXProject "FoodTravelForOC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3F98CD6F1CBA8FB10059AAB3;
+			productRefGroup = 3F98CD791CBA8FB10059AAB3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F98CD771CBA8FB10059AAB3 /* FoodTravelForOC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F98CD761CBA8FB10059AAB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F074EAF1CBD3B8F00189688 /* Discover.storyboard in Resources */,
+				3F074ECB1CBE300000189688 /* Main.storyboard in Resources */,
+				3F074EBA1CBDE1DF00189688 /* More.storyboard in Resources */,
+				3F98CD881CBA8FB20059AAB3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CFF23798C07ED3AEB4C0FBCA /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodTravelForOC/Pods-FoodTravelForOC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC9913CF927DA84DB14A984C /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodTravelForOC/Pods-FoodTravelForOC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA1809B2A43B7AFD681BB164 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F98CD741CBA8FB10059AAB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F074ED11CBE525900189688 /* FoodFromLeanClound.m in Sources */,
+				3F074E5A1CBC06CA00189688 /* main.m in Sources */,
+				3F98CD801CBA8FB20059AAB3 /* AppDelegate.m in Sources */,
+				3F074ECE1CBE4C0500189688 /* WebViewController.m in Sources */,
+				3F074F131CBF358000189688 /* DiscoverViewController.m in Sources */,
+				3F074EBD1CBDE21E00189688 /* MoreTableViewController.m in Sources */,
+				3FB11F8B1CC7961100DADE85 /* LauchViewController.m in Sources */,
+				3F298EFD1CC6593400225218 /* ReviewViewController.m in Sources */,
+				3F074EA01CBCB0AB00189688 /* Food.m in Sources */,
+				3F074F201CC0B68B00189688 /* LocationTableViewController.m in Sources */,
+				3F298EF71CC63BE900225218 /* DetailViewController.m in Sources */,
+				3F298EE91CC4DB5500225218 /* AddTableViewController.m in Sources */,
+				3F298ED71CC3DB9800225218 /* FoodTableViewCell.m in Sources */,
+				3F074EA61CBCB4ED00189688 /* Account.m in Sources */,
+				3F074E5F1CBCA21500189688 /* FoodTravelForOC.xcdatamodeld in Sources */,
+				3F298EDA1CC3DF0E00225218 /* FoodTableViewController.m in Sources */,
+				3F074E9F1CBCB0AB00189688 /* Food+CoreDataProperties.m in Sources */,
+				3F074F101CBEB91C00189688 /* FoodCollectionViewCell.m in Sources */,
+				3F0318751CC1D84400C54801 /* TabViewController.m in Sources */,
+				3F074F1A1CC0A9E700189688 /* WeatherModel.m in Sources */,
+				3F298EFA1CC6580900225218 /* MapViewController.m in Sources */,
+				3F03186B1CC14EEB00C54801 /* WelcomeViewController.m in Sources */,
+				3F298EF41CC63B1200225218 /* DetailTableViewCell.m in Sources */,
+				3F074F1D1CC0B18100189688 /* WeatherViewController.m in Sources */,
+				3F0318681CC1493600C54801 /* WelcomePageViewController.m in Sources */,
+				3F074EA91CBCBD7E00189688 /* SignViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3F98CD8D1CBA8FB20059AAB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3F98CD8E1CBA8FB20059AAB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F98CD901CBA8FB20059AAB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BB8058A21424F43B4FA4426 /* Pods-FoodTravelForOC.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "FoodTravelForOC/FoodTravelForOC-Prefix.pch";
+				INFOPLIST_FILE = FoodTravelForOC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.angelorlover.FoodTravelForOC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3F98CD911CBA8FB20059AAB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2F1AF726AA48B47E6365D43 /* Pods-FoodTravelForOC.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "FoodTravelForOC/FoodTravelForOC-Prefix.pch";
+				INFOPLIST_FILE = FoodTravelForOC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.angelorlover.FoodTravelForOC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F98CD731CBA8FB10059AAB3 /* Build configuration list for PBXProject "FoodTravelForOC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F98CD8D1CBA8FB20059AAB3 /* Debug */,
+				3F98CD8E1CBA8FB20059AAB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F98CD8F1CBA8FB20059AAB3 /* Build configuration list for PBXNativeTarget "FoodTravelForOC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F98CD901CBA8FB20059AAB3 /* Debug */,
+				3F98CD911CBA8FB20059AAB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3F074E5D1CBCA21500189688 /* FoodTravelForOC.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3F074E5E1CBCA21500189688 /* FoodTravelForOC.xcdatamodel */,
+			);
+			currentVersion = 3F074E5E1CBCA21500189688 /* FoodTravelForOC.xcdatamodel */;
+			path = FoodTravelForOC.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3F98CD701CBA8FB10059AAB3 /* Project object */;
+}
