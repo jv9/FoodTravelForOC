@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Account.h"
 #import "TabViewController.h"
+#import "FoodFromLeanClound.h"
 
 @interface SignViewController : UIViewController <UITextFieldDelegate>
 

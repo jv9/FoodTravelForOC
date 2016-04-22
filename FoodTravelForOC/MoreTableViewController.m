@@ -28,7 +28,6 @@
     [super viewDidLoad];
     self.userImageView.layer.cornerRadius = 25;
     self.userImageView.clipsToBounds = YES;
-    [self loadUserFromLeanCloud];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -39,13 +38,13 @@
 
 //懒加载（重写get）
 
-- (Account *)account
-{
-    if (_account == nil) {
-        _account = [[Account alloc] init];
-    }
-    return _account;
-}
+//- (Account *)account
+//{
+//    if (_account == nil) {
+//        _account = [[Account alloc] init];
+//    }
+//    return _account;
+//}
 
 //懒加载（重写get）
 - (NSArray *)sectionTitles
@@ -182,28 +181,31 @@
         [self presentViewController:alertController animated:YES completion:nil];
     }
 }
-//更新用户图片
-#warning (未实现)
+//更新用户图片(仅限首次上传图片)
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     NSData *data = UIImageJPEGRepresentation(image, 1.0);
     self.userImageView.contentMode = UIViewContentModeScaleAspectFit;
     self.userImageView.clipsToBounds = YES;
-    self.account.image = [AVFile fileWithData:data];
+    NSString *username = [[NSUserDefaults standardUserDefaults] valueForKey:@"username"];
+    AVFile *imageFile = [AVFile fileWithName:[username stringByAppendingString:@".jpg"] data: data];
     [self dismissViewControllerAnimated:YES completion:^(void) {
         if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isLogin"]) {
-            _userImageView.image = image;
-            [[self.account toAVObeject:@"Account"] saveInBackgroundWithBlock:^(BOOL success, NSError *error) {
+            AVObject *object = [self.account toAVObeject:@"Account"];
+            [object setObject:imageFile forKey:@"image"];
+            [object saveInBackgroundWithBlock:^(BOOL success, NSError *error) {
                 if (error != nil) {
                     NSLog(@"%@", error);
                     NSLog(@"上传失败");
                 }
                 if (success) {
                     //更新图片成功提示
-                    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"上传成功" message:@"" preferredStyle:UIAlertControllerStyleAlert];
-                    UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"确实" style:UIAlertActionStyleCancel handler:nil];
-                    [alertController addAction:alertAction];
-                    [self presentViewController:alertController animated:YES completion:nil];
+                    [self loadUserFromLeanCloud];
+                    NSLog(@"上传成功");
+//                    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"上传成功" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+//                    UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"确实" style:UIAlertActionStyleCancel handler:nil];
+//                    [alertController addAction:alertAction];
+//                    [self presentViewController:alertController animated:YES completion:nil];
                 }
             }];
         } else {

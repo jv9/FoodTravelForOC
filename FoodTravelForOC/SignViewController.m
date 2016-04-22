@@ -12,11 +12,13 @@
 
 @property (nonatomic, weak) IBOutlet UITextField *userTextField;
 @property (nonatomic, weak) IBOutlet UITextField *passwordTextField;
-@property (nonatomic, weak) IBOutlet UIButton *loginButton;
+@property (nonatomic, weak) IBOutlet UIButton *signinButton;
 @property (nonatomic, weak) IBOutlet UIView *userView;
 @property (nonatomic, weak) IBOutlet UIImageView *imageView;
+@property (nonatomic, weak) IBOutlet UIButton *signupButton;
 
 @property (nonatomic) Account *account;
+@property (nonatomic) FoodFromLeanClound *food;
 @property (nonatomic) UIVisualEffectView *blurEffectiveView;
 
 @end
@@ -40,6 +42,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 //理解present和dismiss过程
 
@@ -110,7 +113,14 @@
 
 #pragma mark - 登录
 
-- (IBAction)login:(UIButton *)sender {
+- (IBAction)signin:(UIButton *)sender {
+    if ([self.userTextField.text  isEqual: @""] || [self.passwordTextField.text  isEqual: @""]) {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"用户名或密码不为空" message:@"请输入" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
+        [alertController addAction:action];
+        [self presentViewController:alertController animated:YES completion:nil];
+        return;
+    }
     AVQuery *query = [AVQuery queryWithClassName:@"Account"];
     [query whereKey:@"username" equalTo:_userTextField.text];
     NSLog(@"获取账户信息");
@@ -137,7 +147,7 @@
                 } completion:nil];
             }
         } else {
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"用户名不存在" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"用户名不存在" message:@"请输入" preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
             [alertController addAction:action];
             //支持iPad
@@ -149,13 +159,80 @@
     }];
 }
 
+- (IBAction)signup:(UIButton *)sender {
+    if ([self.userTextField.text  isEqual: @""] || [self.passwordTextField.text  isEqual: @""]) {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"用户名或密码不为空" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
+        [alertController addAction:action];
+        [self presentViewController:alertController animated:YES completion:nil];
+        return;
+    }
+    AVQuery *query = [AVQuery queryWithClassName:@"Account"];
+    [query whereKey:@"username" equalTo:self.userTextField.text];
+    NSLog(@"查询用户名是否存在");
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objectArray, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+        }
+        if (objectArray.count > 0) {
+            NSLog(@"%lu",(unsigned long)objectArray.count);
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"用户名已存在" message:@"请重新输入" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
+            [alertController addAction:action];
+            [self presentViewController:alertController animated:YES completion:nil];
+        } else {
+            AVObject *object = [[AVObject alloc] initWithClassName:@"Account"];
+            [object setObject:self.userTextField.text forKey:@"username"];
+            [object setObject:self.passwordTextField.text forKey:@"password"];
+            [object saveInBackgroundWithBlock:^(BOOL success, NSError *error) {
+                if (error) {
+                    NSLog(@"%@",error);
+                }
+                if (success) {
+                    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                    [defaults setValue:self.userTextField.text forKey:@"username"];
+                    [defaults setBool:YES forKey:@"isLogin"];
+                    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"注册成功" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+                    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                        AVQuery *query = [AVQuery queryWithClassName:@"Test"];
+                        [query getFirstObjectInBackgroundWithBlock:^(AVObject *object, NSError *error) {
+                            if (error) {
+                                NSLog(@"%@",error);
+                            }
+                            if (object) {
+                                self.food = [[FoodFromLeanClound alloc] initWithObject:object];
+                                NSString *string = [defaults valueForKey:@"username"];
+                                AVObject *temp = [[AVObject alloc] initWithClassName:string];
+                                [temp setObject:self.food.name forKey:@"name"];
+                                [temp setObject:self.food.location forKey:@"location"];
+                                [temp setObject:self.food.isLike forKey:@"isLike"];
+                                [temp setObject:self.food.image forKey:@"image"];
+                                [temp saveInBackgroundWithBlock:^(BOOL success, NSError *error) {
+                                    if (error) {
+                                        NSLog(@"%@",error);
+                                    }
+                                }];
+                                [temp deleteInBackground];
+                            }
+                        }];
+                        TabViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"Home"];
+                        [self presentViewController:controller animated:YES completion:nil];
+                    }];
+                    [alertController addAction:action];
+                    [self presentViewController:alertController animated:NO completion:nil];
+                }
+            }];
+        }
+    }];
+}
+
 -(IBAction)visit:(UIButton *)sender {
 //    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
 //    UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"Main"];
 //    [self presentViewController:controller animated:YES completion:nil];
-//    [self dismissViewControllerAnimated:YES completion:nil];
     TabViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"Home"];
     [self presentViewController:controller animated:YES completion:nil];
+//    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

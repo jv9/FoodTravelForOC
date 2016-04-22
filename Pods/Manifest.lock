@@ -1,5 +1,5 @@
 PODS:
-  - AVOSCloudDynamic (3.2.7)
+  - AVOSCloudDynamic (3.2.8)
   - DZNEmptyDataSet (1.7.3)
   - MJExtension (3.0.10)
   - UITableView+FDTemplateLayoutCell (1.5.beta)
@@ -11,7 +11,7 @@ DEPENDENCIES:
   - UITableView+FDTemplateLayoutCell (~> 1.5.beta)
 
 SPEC CHECKSUMS:
-  AVOSCloudDynamic: 1a64ed78c897be98d54d75fd4c8cff0a21e9eeb6
+  AVOSCloudDynamic: 440bbf71ffe533a5090a4329fe80e1027e3b0654
   DZNEmptyDataSet: dd7cca17c1d07dfa78956859b1e70a52505678ef
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
   UITableView+FDTemplateLayoutCell: 02b508ab1cb4cea16a8c17ac83d2cd1fd72124f9

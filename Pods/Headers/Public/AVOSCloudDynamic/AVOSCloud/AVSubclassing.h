@@ -1,1 +1,1 @@
-../../../../AVOSCloudDynamic/iOS/release-v3.2.7/Dynamic/AVOSCloud.framework/Headers/AVSubclassing.h
+../../../../AVOSCloudDynamic/iOS/release-v3.2.8/Dynamic/AVOSCloud.framework/Headers/AVSubclassing.h

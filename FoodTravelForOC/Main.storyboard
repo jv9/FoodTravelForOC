@@ -493,6 +493,15 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="4DQ-cT-CzH">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="SIn-G6-Nop">
+                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="公交 "/>
+                                <segment title="步行"/>
+                            </segments>
+                        </segmentedControl>
                         <barButtonItem key="rightBarButtonItem" title="路线" id="XCt-p8-hS7">
                             <connections>
                                 <action selector="showRoute:" destination="bE9-5K-WuY" id="hO6-Cu-Vwb"/>
@@ -501,11 +510,41 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="zQ9-tX-wa4" id="j9x-qM-VHP"/>
+                        <outlet property="segmentedControl" destination="SIn-G6-Nop" id="bAX-2A-W1p"/>
+                        <segue destination="uij-fU-cyB" kind="show" identifier="showRoute" id="ppV-j8-BIM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bU-qL-8VI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1989" y="1041"/>
+        </scene>
+        <!--路线-->
+        <scene sceneID="Epb-Sj-ONs">
+            <objects>
+                <tableViewController title="路线" id="uij-fU-cyB" customClass="RouteTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="0Ia-0E-118">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="nJd-Qa-eh9">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nJd-Qa-eh9" id="Zrh-64-1d4">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uij-fU-cyB" id="Fmd-MT-i0N"/>
+                            <outlet property="delegate" destination="uij-fU-cyB" id="nBN-Ai-wFC"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wB8-Wr-KVg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2716" y="1041"/>
         </scene>
         <!--AddViewController-->
         <scene sceneID="FXv-06-Ead">

@@ -104,9 +104,9 @@
 		5080C6FCE817766E70679AEBC43CAFC9 /* MJExtensionConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtensionConst.h; path = MJExtension/MJExtensionConst.h; sourceTree = "<group>"; };
 		53194A84C2C5C431F4C704794199328E /* Pods-FoodTravelForOC-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FoodTravelForOC-frameworks.sh"; sourceTree = "<group>"; };
 		57CA8B79646038F8CF8524BAB8902160 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+EmptyDataSet.m"; path = "Source/UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
+		58F77E9BB7733A73A2DF080885541855 /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVOSCloud.framework; path = "iOS/release-v3.2.8/Dynamic/AVOSCloud.framework"; sourceTree = "<group>"; };
 		5D1C7755A3E849F6760D2F74B2999275 /* Pods-FoodTravelForOC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FoodTravelForOC.modulemap"; sourceTree = "<group>"; };
 		5DDF6F254D698CF80CCD24582F5D133C /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+FDTemplateLayoutCell.h"; path = "Classes/UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
-		61B018CD587A7D06B6541A9A32817943 /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVOSCloud.framework; path = "iOS/release-v3.2.7/Dynamic/AVOSCloud.framework"; sourceTree = "<group>"; };
 		62CBC08993F615A7DF1BFAD812B8C358 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+EmptyDataSet.h"; path = "Source/UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
 		63A78A5AAE2C39DD53A697A9E3358BD0 /* MJExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MJExtension-dummy.m"; sourceTree = "<group>"; };
 		63B332E784F272FF3C6D21FA7CA21CEF /* UITableView+FDTemplateLayoutCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UITableView+FDTemplateLayoutCell.xcconfig"; sourceTree = "<group>"; };
@@ -255,10 +255,18 @@
 		4419DCBC31225192FF16EFB813E0A4BC /* AVOSCloudDynamic */ = {
 			isa = PBXGroup;
 			children = (
-				98B777D8B14A00CF54E3B705F18CCEDF /* Frameworks */,
+				4B017F0205BDE70A9604E834285993AD /* Frameworks */,
 				8A21E19A3D10F69C287C9F84606B19E5 /* Resources */,
 			);
 			path = AVOSCloudDynamic;
+			sourceTree = "<group>";
+		};
+		4B017F0205BDE70A9604E834285993AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58F77E9BB7733A73A2DF080885541855 /* AVOSCloud.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -277,14 +285,6 @@
 			children = (
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		98B777D8B14A00CF54E3B705F18CCEDF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				61B018CD587A7D06B6541A9A32817943 /* AVOSCloud.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		B8901C6BE8AF50EF75F50743E630119B /* Pods */ = {

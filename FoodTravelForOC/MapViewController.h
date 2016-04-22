@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "Food.h"
+#import "RouteTableViewController.h"
 
 @interface MapViewController : UIViewController <MKMapViewDelegate>
 
-@property (nonatomic)IBOutlet MKMapView *mapView;
+@property (nonatomic, weak)IBOutlet MKMapView *mapView;
 @property (nonatomic)Food *food;
 
 @end

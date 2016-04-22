@@ -10,10 +10,9 @@
 #import "FoodFromLeanClound.h"
 #import "FoodCollectionViewCell.h"
 #import "SignViewController.h"
-#import "UIScrollView+EmptyDataSet.h"
 
 
-@interface DiscoverViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, FoodCollectionViewCellDelegate, UIGestureRecognizerDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
+@interface DiscoverViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, FoodCollectionViewCellDelegate, UIGestureRecognizerDelegate>
 
 - (void) didLikeButtonPressed: (FoodCollectionViewCell *)cell;
 

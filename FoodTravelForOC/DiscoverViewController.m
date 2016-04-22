@@ -14,6 +14,7 @@
 @property (nonatomic, strong) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, copy) NSMutableArray *foodLean;
 @property (nonatomic) UIVisualEffectView *blurEffectiveView;
+@property (nonatomic, copy)NSString *username;
 
 @end
 
@@ -21,10 +22,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.collectionView.emptyDataSetSource = self;
-    self.collectionView.emptyDataSetDelegate = self;
+
     // Do any additional setup after loading the view.
-    _collectionView.backgroundColor = [UIColor clearColor];
+    self.collectionView.backgroundColor = [UIColor clearColor];
     
     //模糊背景
     _blurEffectiveView = [[UIVisualEffectView alloc] initWithEffect: [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark]];
@@ -52,20 +52,24 @@
     return _foodLean;
 }
 
+
 - (void)viewWillAppear:(BOOL)animated {
-    [self loadData];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isLogin"]) {
+        [self loadData];
+    }
 }
 
 //登录判断
-//- (void)viewDidAppear:(BOOL)animated {
-//    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isLogin"]) {
-//        return;
-//    }
-//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"More" bundle:nil];
-//    SignViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"Sign"];
-//    [self presentViewController:controller animated:YES completion:nil];
-//    
-//}
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:YES];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isLogin"]) {
+        return;
+    }
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"More" bundle:nil];
+    SignViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"Sign"];
+    [self presentViewController:controller animated:YES completion:nil];
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -77,9 +81,9 @@
 - (void) loadData {
     [self.foodLean removeAllObjects];
     [self.collectionView reloadData];
-    NSString *name = @"Food";
-    AVQuery *query = [AVQuery queryWithClassName:name];
-    query.cachePolicy = kAVCachePolicyNetworkElseCache;
+    NSString *string = [[NSUserDefaults standardUserDefaults] valueForKey:@"username"];
+    AVQuery *query = [AVQuery queryWithClassName:string];
+    query.cachePolicy = kAVCachePolicyNetworkOnly;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (error) {
             NSLog(@"Error: %@%@", error, error.userInfo);
@@ -98,8 +102,10 @@
                 NSLog(@"%ld",(long)i);
                 NSLog(@"数据获取成功");
             }
-            [self.collectionView reloadData];
-            NSLog(@"%lu", self.foodLean.count);
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^(void) {
+                [self.collectionView reloadData];
+            }];
+//            NSLog(@"%lu", self.foodLean.count);
             NSLog(@"%ld",(long)[self collectionView:self.collectionView numberOfItemsInSection:0]);
         } else {
             NSLog(@"数据获取失败");
@@ -113,14 +119,16 @@
     if (gesture.state == UIGestureRecognizerStateEnded) {
         NSIndexPath *indexPath = [_collectionView indexPathForItemAtPoint:point];
         if (indexPath) {
-            [[_foodLean[indexPath.row] toAVObject:@"Food"] deleteInBackgroundWithBlock: ^(BOOL success, NSError *error) {
+            [self.collectionView reloadData];
+            NSString *string = [[NSUserDefaults standardUserDefaults] valueForKey:@"username"];
+            [[self.foodLean[indexPath.row] toAVObject:string] deleteInBackgroundWithBlock: ^(BOOL success, NSError *error) {
                 if (error) {
                     NSLog(@"删除数据失败");
                 }
                 if (success) {
                     NSLog(@"已删除数据");
                 }
-                [_foodLean removeObjectAtIndex:indexPath.row];
+                [self.foodLean removeObjectAtIndex:indexPath.row];
                 
                 [self.collectionView deleteItemsAtIndexPaths:[NSArray arrayWithObjects:indexPath, nil]];
                 
@@ -160,12 +168,14 @@
 - (void) didLikeButtonPressed: (FoodCollectionViewCell *)cell {
         NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
         if (indexPath) {
-            FoodFromLeanClound *object = _foodLean[indexPath.row];
+            FoodFromLeanClound *object = self.foodLean[indexPath.row];
             object.isLike = object.isLike.boolValue ?  @(0) : @(1);
             cell.isLike = object.isLike;
             NSLog(@"1Cell :%i", cell.isLike.boolValue);
             NSLog(@"isLike:%@",cell.isLike);
-            [[object toAVObject:@"Food"] saveInBackgroundWithBlock:^(BOOL success, NSError *error) {
+            [self.collectionView reloadData];
+            NSString *string = [[NSUserDefaults standardUserDefaults] valueForKey:@"username"];
+            [[object toAVObject:string] saveInBackgroundWithBlock:^(BOOL success, NSError *error) {
                 if (error) {
                     NSLog(@"点赞失败");
                 }
@@ -180,7 +190,6 @@
 - (IBAction)refresh:(id)sender {
     [self loadData];
 }
-
 
 
 #pragma mark - Data Source

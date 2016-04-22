@@ -10,8 +10,11 @@
 
 @interface MapViewController ()
 
+@property (nonatomic, weak) IBOutlet UISegmentedControl *segmentedControl;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) CLPlacemark *currentPlacemark;
+@property (nonatomic, strong) MKRoute *currentRoute;
+@property (nonatomic) MKDirectionsTransportType currentTransportType;
 
 @end
 
@@ -20,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.segmentedControl.hidden = YES;
     self.mapView.delegate = self;
     //查询定位权限
     self.locationManager = [[CLLocationManager alloc] init];
@@ -45,6 +49,8 @@
         [self.mapView showAnnotations:@[annotation] animated:YES];
         [self.mapView selectAnnotation:annotation animated:YES];
     }];
+    //segmnetcontrol添加方法
+    [self.segmentedControl addTarget:self action:@selector(showRoute:) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -65,19 +71,35 @@
     UIImageView *view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
     view.image = [UIImage imageWithData:self.food.image];
     annotationView.leftCalloutAccessoryView = view;
+    annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     annotationView.canShowCallout = YES;
     return annotationView;
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+    [self performSegueWithIdentifier:@"showRoute" sender:view];
 }
 
 - (IBAction)showRoute:(UIButton *)sender {
     if (!self.currentPlacemark) {
         return;
     }
+    switch (self.segmentedControl.selectedSegmentIndex) {
+        case 0:
+            self.currentTransportType = MKDirectionsTransportTypeAutomobile;
+            break;
+        case 1:
+            self.currentTransportType = MKDirectionsTransportTypeWalking;
+            break;
+        default:
+            break;
+    }
+    self.segmentedControl.hidden = NO;
     MKDirectionsRequest *directionRequest = [[MKDirectionsRequest alloc] init];
     directionRequest.source = [MKMapItem mapItemForCurrentLocation];
     MKPlacemark *destinationPlacemark = [[MKPlacemark alloc]initWithPlacemark:self.currentPlacemark];
     directionRequest.destination = [[MKMapItem alloc]initWithPlacemark:destinationPlacemark];
-    directionRequest.transportType = MKDirectionsTransportTypeWalking;
+    directionRequest.transportType = self.currentTransportType;
     MKDirections *direction = [[MKDirections alloc] initWithRequest:directionRequest];
     [direction calculateDirectionsWithCompletionHandler:^(MKDirectionsResponse *response, NSError *error) {
         if (error) {
@@ -86,6 +108,8 @@
         }
         //显示路线
         MKRoute *route = response.routes[0];
+        self.currentRoute = route;
+        [self.mapView removeOverlays:self.mapView.overlays];
         [self.mapView addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
         
         //自动缩放显示区域
@@ -95,19 +119,23 @@
 
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay {
     MKPolylineRenderer *render = [[MKPolylineRenderer alloc] initWithOverlay:overlay];
-    render.strokeColor = [UIColor whiteColor];
+    render.strokeColor = (self.currentTransportType == MKDirectionsTransportTypeWalking) ? [UIColor blueColor] : [UIColor redColor];
     render.lineWidth = 3.0;
     return render;
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"showRoute"]) {
+        RouteTableViewController *controller = segue.destinationViewController;
+        controller.routeArray = self.currentRoute.steps;
+    }
 }
-*/
+
 
 @end

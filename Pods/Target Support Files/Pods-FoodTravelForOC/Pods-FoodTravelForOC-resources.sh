@@ -80,10 +80,10 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "AVOSCloudDynamic/iOS/release-v3.2.7/Dynamic/AVOSCloud.framework"
+  install_resource "AVOSCloudDynamic/iOS/release-v3.2.8/Dynamic/AVOSCloud.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "AVOSCloudDynamic/iOS/release-v3.2.7/Dynamic/AVOSCloud.framework"
+  install_resource "AVOSCloudDynamic/iOS/release-v3.2.8/Dynamic/AVOSCloud.framework"
 fi
 
 mkdir -p "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

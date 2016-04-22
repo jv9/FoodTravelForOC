@@ -259,18 +259,18 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZS8-YH-oNS">
-                                        <rect key="frame" x="50" y="206" width="300" height="40"/>
+                                        <rect key="frame" x="230" y="206" width="120" height="40"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="CIc-Tv-e6D"/>
+                                            <constraint firstAttribute="width" constant="120" id="CIc-Tv-e6D"/>
                                             <constraint firstAttribute="height" constant="40" id="nXc-hi-2UD"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="登录">
+                                        <state key="normal" title="注册">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="login:" destination="U2R-Hr-P9m" eventType="touchUpInside" id="pGn-F3-ArG"/>
+                                            <action selector="signup:" destination="U2R-Hr-P9m" eventType="touchUpInside" id="BGf-5h-Quo"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5v-zB-qAP">
@@ -280,6 +280,7 @@
                                             <constraint firstAttribute="height" constant="40" id="WzV-1F-6bN"/>
                                             <constraint firstAttribute="width" constant="300" id="aLs-eP-9Pd"/>
                                             <constraint firstAttribute="width" constant="84" id="oMD-Y0-PyX"/>
+                                            <constraint firstAttribute="height" constant="40" id="wC1-CB-o8w"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="随便看看">
@@ -293,6 +294,21 @@
                                         </variation>
                                         <connections>
                                             <action selector="visit:" destination="U2R-Hr-P9m" eventType="touchUpInside" id="UNP-9L-7FI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRI-gi-fwc">
+                                        <rect key="frame" x="50" y="206" width="120" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="IUT-9g-q8d"/>
+                                            <constraint firstAttribute="width" constant="120" id="waR-OU-DbI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="登录">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signin:" destination="U2R-Hr-P9m" eventType="touchUpInside" id="f9t-fM-DM1"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -310,9 +326,12 @@
                                     <constraint firstItem="j8u-Hm-2Pc" firstAttribute="top" secondItem="Gt4-Ys-dla" secondAttribute="bottom" constant="15" id="R6Y-b1-k23"/>
                                     <constraint firstItem="Gt4-Ys-dla" firstAttribute="top" secondItem="85K-xk-rvr" secondAttribute="top" constant="25" id="SMx-rx-mB8"/>
                                     <constraint firstItem="i5v-zB-qAP" firstAttribute="centerX" secondItem="85K-xk-rvr" secondAttribute="centerX" id="ZJO-4V-bQY"/>
+                                    <constraint firstItem="vRI-gi-fwc" firstAttribute="centerY" secondItem="ZS8-YH-oNS" secondAttribute="centerY" id="bXn-gQ-8w2"/>
                                     <constraint firstItem="i5v-zB-qAP" firstAttribute="top" secondItem="ZS8-YH-oNS" secondAttribute="bottom" constant="20" id="hiw-1E-AiI"/>
                                     <constraint firstItem="i5v-zB-qAP" firstAttribute="height" secondItem="ZS8-YH-oNS" secondAttribute="height" id="iRN-zT-z3e"/>
                                     <constraint firstItem="ZS8-YH-oNS" firstAttribute="top" secondItem="jLu-2K-wuP" secondAttribute="bottom" constant="80" id="jie-E7-zIe"/>
+                                    <constraint firstItem="vRI-gi-fwc" firstAttribute="leading" secondItem="i5v-zB-qAP" secondAttribute="leading" id="rHG-pi-qGZ"/>
+                                    <constraint firstItem="ZS8-YH-oNS" firstAttribute="trailing" secondItem="i5v-zB-qAP" secondAttribute="trailing" id="seN-t0-Kjc"/>
                                     <constraint firstAttribute="width" constant="400" id="ytc-Yy-EjK"/>
                                     <constraint firstAttribute="height" constant="300" id="zuG-gA-P6U"/>
                                 </constraints>
@@ -320,6 +339,8 @@
                                     <mask key="constraints">
                                         <exclude reference="IpJ-5t-qyC"/>
                                         <exclude reference="2TO-n1-zMs"/>
+                                        <exclude reference="iRN-zT-z3e"/>
+                                        <exclude reference="5qX-Ua-yWH"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -360,8 +381,9 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="imageView" destination="yNc-tE-5Zq" id="NHs-pu-1vB"/>
-                        <outlet property="loginButton" destination="ZS8-YH-oNS" id="qYq-Bl-EiI"/>
                         <outlet property="passwordTextField" destination="Axa-If-LCz" id="kOk-g5-EhM"/>
+                        <outlet property="signinButton" destination="vRI-gi-fwc" id="8k3-yt-STK"/>
+                        <outlet property="signupButton" destination="ZS8-YH-oNS" id="qc5-33-Sx7"/>
                         <outlet property="userTextField" destination="Gt4-Ys-dla" id="PRE-9f-FjQ"/>
                         <outlet property="userView" destination="85K-xk-rvr" id="vj4-tY-b1d"/>
                     </connections>

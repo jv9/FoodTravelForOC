@@ -34,8 +34,8 @@
     [[UINavigationBar appearance].titleTextAttributes setValue:[UIColor whiteColor] forKey:@"NSForegroundColorAttributeName"];
     return YES;
     
-    NSBundle *bundle = [NSBundle mainBundle];
-    NSDictionary *infoDictionary = bundle.infoDictionary;
+//    NSBundle *bundle = [NSBundle mainBundle];
+    NSDictionary *infoDictionary = [NSBundle mainBundle].infoDictionary;
     NSString *currentVersion = [infoDictionary valueForKey: @"CFBundleShortVersionString"];
     
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];

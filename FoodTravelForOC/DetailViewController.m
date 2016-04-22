@@ -103,7 +103,9 @@
 }
 
 - (IBAction)upload:(id)sender {
-    AVObject *newFood = [AVObject objectWithClassName:@"Food"];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *string = [defaults valueForKey:@"username"];
+    AVObject *newFood = [AVObject objectWithClassName:string];
     [newFood setObject:self.food.name forKey:@"name"];
     [newFood setObject:@(0) forKey:@"isLike"];
     [newFood setObject:self.food.location forKey:@"location"];

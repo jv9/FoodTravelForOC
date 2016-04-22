@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <Social/Social.h>
-//#import "UITableView+FDTemplateLayoutCell.h"
 #import "Food.h"
 #import "FoodTableViewCell.h"
 #import "DetailViewController.h"
 #import "AppDelegate.h"
+#import "UIScrollView+EmptyDataSet.h"
 
-@interface FoodTableViewController : UITableViewController <NSFetchedResultsControllerDelegate, UISearchResultsUpdating>
+@interface FoodTableViewController : UITableViewController <NSFetchedResultsControllerDelegate, UISearchResultsUpdating, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 
 @end
