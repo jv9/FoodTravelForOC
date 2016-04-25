@@ -42,6 +42,12 @@
     longPress.delegate = self;
     [self.collectionView addGestureRecognizer:longPress];
     
+    //兼容3.5英寸设备
+    if ([UIScreen mainScreen].bounds.size.height == 480.0) {
+        UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
+        flowLayout.itemSize = CGSizeMake(250.0, 300.0);        
+    }
+    
 }
 
 //懒加载
@@ -98,15 +104,11 @@
                 NSIndexPath *temp = [NSIndexPath indexPathForRow:i inSection:0];
                 NSArray *indexTemp = [NSArray arrayWithObjects:temp, nil];
                 [self.collectionView insertItemsAtIndexPaths:indexTemp];
-                NSLog(@"%@", indexTemp);
-                NSLog(@"%ld",(long)i);
                 NSLog(@"数据获取成功");
             }
             [[NSOperationQueue mainQueue] addOperationWithBlock:^(void) {
                 [self.collectionView reloadData];
             }];
-//            NSLog(@"%lu", self.foodLean.count);
-            NSLog(@"%ld",(long)[self collectionView:self.collectionView numberOfItemsInSection:0]);
         } else {
             NSLog(@"数据获取失败");
         }

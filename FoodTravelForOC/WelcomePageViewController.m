@@ -63,8 +63,6 @@
 
 - (UIViewController *)viewControllerAtIndex: (NSInteger)index {
     if ( index == NSNotFound || index < 0 || index >= self.pageFooting.count) {
-        NSLog(@"%lu", (unsigned long)self.pageFooting.count);
-         NSLog(@"hehe");
         return nil;
     }
     WelcomeViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"WelcomeViewController"];

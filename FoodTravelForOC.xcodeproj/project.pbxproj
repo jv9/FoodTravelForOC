@@ -21,7 +21,6 @@
 		3F074EBA1CBDE1DF00189688 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F074EB91CBDE1DF00189688 /* More.storyboard */; };
 		3F074EBD1CBDE21E00189688 /* MoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F074EBC1CBDE21E00189688 /* MoreTableViewController.m */; };
 		3F074ECB1CBE300000189688 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F074ECA1CBE300000189688 /* Main.storyboard */; };
-		3F074ECE1CBE4C0500189688 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F074ECD1CBE4C0500189688 /* WebViewController.m */; };
 		3F074ED11CBE525900189688 /* FoodFromLeanClound.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F074ED01CBE525900189688 /* FoodFromLeanClound.m */; };
 		3F074F101CBEB91C00189688 /* FoodCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F074F0F1CBEB91C00189688 /* FoodCollectionViewCell.m */; };
 		3F074F131CBF358000189688 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F074F121CBF358000189688 /* DiscoverViewController.m */; };
@@ -68,8 +67,6 @@
 		3F074EBB1CBDE21E00189688 /* MoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTableViewController.h; sourceTree = "<group>"; };
 		3F074EBC1CBDE21E00189688 /* MoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTableViewController.m; sourceTree = "<group>"; };
 		3F074ECA1CBE300000189688 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		3F074ECC1CBE4C0500189688 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		3F074ECD1CBE4C0500189688 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		3F074ECF1CBE525900189688 /* FoodFromLeanClound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodFromLeanClound.h; sourceTree = "<group>"; };
 		3F074ED01CBE525900189688 /* FoodFromLeanClound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodFromLeanClound.m; sourceTree = "<group>"; };
 		3F074F0E1CBEB91C00189688 /* FoodCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodCollectionViewCell.h; sourceTree = "<group>"; };
@@ -277,8 +274,6 @@
 		3F074EC61CBDE38400189688 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3F074ECC1CBE4C0500189688 /* WebViewController.h */,
-				3F074ECD1CBE4C0500189688 /* WebViewController.m */,
 				3F0318691CC14EEB00C54801 /* WelcomeViewController.h */,
 				3F03186A1CC14EEB00C54801 /* WelcomeViewController.m */,
 				3F074EBB1CBDE21E00189688 /* MoreTableViewController.h */,
@@ -486,6 +481,9 @@
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 48CXC6ZV5N;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
 							com.apple.Maps.iOS = {
 								enabled = 1;
 							};
@@ -581,7 +579,6 @@
 				3F074ED11CBE525900189688 /* FoodFromLeanClound.m in Sources */,
 				3F074E5A1CBC06CA00189688 /* main.m in Sources */,
 				3F98CD801CBA8FB20059AAB3 /* AppDelegate.m in Sources */,
-				3F074ECE1CBE4C0500189688 /* WebViewController.m in Sources */,
 				3FF4A4611CCA28DD0068CF77 /* RouteTableViewController.m in Sources */,
 				3F074F131CBF358000189688 /* DiscoverViewController.m in Sources */,
 				3F074EBD1CBDE21E00189688 /* MoreTableViewController.m in Sources */,
@@ -704,8 +701,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "FoodTravelForOC/FoodTravelForOC-Prefix.pch";
 				INFOPLIST_FILE = FoodTravelForOC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.angelorlover.FoodTravelForOC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qianyuqianxun.FoodTravelForOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -722,8 +720,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "FoodTravelForOC/FoodTravelForOC-Prefix.pch";
 				INFOPLIST_FILE = FoodTravelForOC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.angelorlover.FoodTravelForOC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qianyuqianxun.FoodTravelForOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

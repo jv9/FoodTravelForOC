@@ -246,6 +246,14 @@
 //    [self presentViewController:alertController animated:YES completion:nil];
 //}
 
+- (void)mailComposeController:(MFMailComposeViewController *)controller
+          didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    // Check the result or perform other tasks.
+    
+    // Dismiss the mail compose view controller.
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -286,7 +294,21 @@
 //            [[UIApplication sharedApplication] openURL:url];
 //        }
         if (indexPath.row == 0) {
-            [self performSegueWithIdentifier:@"showWebView" sender:self];
+//            [self performSegueWithIdentifier:@"showEmail" sender:self];
+            if (![MFMailComposeViewController canSendMail]) {
+                NSLog(@"Mail services are not available.");
+                return;
+            }
+            MFMailComposeViewController* composeVC = [[MFMailComposeViewController alloc] init];
+            composeVC.mailComposeDelegate = self;
+            
+            // Configure the fields of the interface.
+            [composeVC setToRecipients:@[@"angelorlover@hotmail.com"]];
+            [composeVC setSubject:@"您的反馈"];
+            [composeVC setMessageBody:@"请在此处写下您的宝贵意见。" isHTML:NO];
+            
+            // Present the view controller modally.
+            [self presentViewController:composeVC animated:YES completion:nil];
         }
     } else if (indexPath.section == 1) {
         NSURL *url = [NSURL URLWithString:self.links[indexPath.row]];

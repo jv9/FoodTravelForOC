@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <SafariServices/SafariServices.h>
 #import "WelcomePageViewController.h"
+#import <MessageUI/MessageUI.h>
 
-@interface MoreTableViewController : UITableViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface MoreTableViewController : UITableViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, MFMailComposeViewControllerDelegate>
 
 @end

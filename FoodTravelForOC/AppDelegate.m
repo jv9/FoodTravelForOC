@@ -32,10 +32,9 @@
     [UINavigationBar appearance].barTintColor = [UIColor colorWithRed:255.0/255.0 green:182.0/255.0 blue:193.0/255.0 alpha:1];
     [UINavigationBar appearance].tintColor = [UIColor whiteColor];
     [[UINavigationBar appearance].titleTextAttributes setValue:[UIColor whiteColor] forKey:@"NSForegroundColorAttributeName"];
-    return YES;
     
-//    NSBundle *bundle = [NSBundle mainBundle];
-    NSDictionary *infoDictionary = [NSBundle mainBundle].infoDictionary;
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    NSDictionary *infoDictionary = [mainBundle infoDictionary];
     NSString *currentVersion = [infoDictionary valueForKey: @"CFBundleShortVersionString"];
     
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];

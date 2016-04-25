@@ -131,12 +131,14 @@
         if (object) {
             NSLog(@"获取成功");
             Account *account = [[Account alloc] initWithObject:object];
-            if (account.password == self.passwordTextField.text) {
+            if ([account.password isEqualToString:self.passwordTextField.text]) {
                 NSLog(@"匹配成功");
                 NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
                 [defaults setValue:self.userTextField.text forKey:@"username"];
                 [defaults setBool:YES forKey:@"isLogin"];
                 [self dismissViewControllerAnimated:YES completion:nil];
+//                TabViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"Home"];
+//                [self presentViewController:controller animated:YES completion:nil];
                 
             } else {
                 //晃动效果
