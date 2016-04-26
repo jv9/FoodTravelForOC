@@ -1,10 +1,6 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## AVOSCloudDynamic
-
-Copyright 2015 LeanCloud, Inc. See https://leancloud.cn/terms.html
-
 ## DZNEmptyDataSet
 
 The MIT License (MIT)

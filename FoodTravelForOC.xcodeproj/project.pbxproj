@@ -38,6 +38,14 @@
 		3F98CD881CBA8FB20059AAB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F98CD871CBA8FB20059AAB3 /* Assets.xcassets */; };
 		3FB11F881CC6A1C100DADE85 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB11F871CC6A1C100DADE85 /* MapKit.framework */; };
 		3FB11F8B1CC7961100DADE85 /* LauchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB11F8A1CC7961100DADE85 /* LauchViewController.m */; };
+		3FC5B7861CCF6D790007757B /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC5B7851CCF6D790007757B /* AVOSCloud.framework */; };
+		3FC5B7881CCF6E200007757B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC5B7871CCF6E200007757B /* SystemConfiguration.framework */; };
+		3FC5B78A1CCF6E2A0007757B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC5B7891CCF6E2A0007757B /* MobileCoreServices.framework */; };
+		3FC5B78C1CCF6E320007757B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC5B78B1CCF6E320007757B /* CoreTelephony.framework */; };
+		3FC5B78E1CCF6E3E0007757B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC5B78D1CCF6E3E0007757B /* CoreLocation.framework */; };
+		3FC5B7921CCF6F460007757B /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC5B7911CCF6F460007757B /* libicucore.tbd */; };
+		3FC5B7981CCFA2BB0007757B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC5B7971CCFA2BB0007757B /* Images.xcassets */; };
+		3FC5B79C1CCFA91B0007757B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC5B79B1CCFA91B0007757B /* Default-568h@2x.png */; };
 		3FF4A4611CCA28DD0068CF77 /* RouteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF4A4601CCA28DD0068CF77 /* RouteTableViewController.m */; };
 		D0DE3081A5E48D0FF025A0B6 /* Pods_FoodTravelForOC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F1D5BCD11C7D15372ADE374 /* Pods_FoodTravelForOC.framework */; };
 /* End PBXBuildFile section */
@@ -101,6 +109,14 @@
 		3FB11F871CC6A1C100DADE85 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3FB11F891CC7961100DADE85 /* LauchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LauchViewController.h; sourceTree = "<group>"; };
 		3FB11F8A1CC7961100DADE85 /* LauchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LauchViewController.m; sourceTree = "<group>"; };
+		3FC5B7851CCF6D790007757B /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
+		3FC5B7871CCF6E200007757B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3FC5B7891CCF6E2A0007757B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		3FC5B78B1CCF6E320007757B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		3FC5B78D1CCF6E3E0007757B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3FC5B7911CCF6F460007757B /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		3FC5B7971CCFA2BB0007757B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3FC5B79B1CCFA91B0007757B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3FF4A45F1CCA28DD0068CF77 /* RouteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteTableViewController.h; sourceTree = "<group>"; };
 		3FF4A4601CCA28DD0068CF77 /* RouteTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteTableViewController.m; sourceTree = "<group>"; };
 		6F1D5BCD11C7D15372ADE374 /* Pods_FoodTravelForOC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodTravelForOC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,9 +128,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FC5B7921CCF6F460007757B /* libicucore.tbd in Frameworks */,
+				3FC5B78E1CCF6E3E0007757B /* CoreLocation.framework in Frameworks */,
+				3FC5B78C1CCF6E320007757B /* CoreTelephony.framework in Frameworks */,
+				3FC5B78A1CCF6E2A0007757B /* MobileCoreServices.framework in Frameworks */,
+				3FC5B7881CCF6E200007757B /* SystemConfiguration.framework in Frameworks */,
 				3F074E5C1CBCA15B00189688 /* CoreData.framework in Frameworks */,
 				3FB11F881CC6A1C100DADE85 /* MapKit.framework in Frameworks */,
 				D0DE3081A5E48D0FF025A0B6 /* Pods_FoodTravelForOC.framework in Frameworks */,
+				3FC5B7861CCF6D790007757B /* AVOSCloud.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +414,7 @@
 		3F98CD6F1CBA8FB10059AAB3 = {
 			isa = PBXGroup;
 			children = (
+				3FC5B79B1CCFA91B0007757B /* Default-568h@2x.png */,
 				3F98CD7A1CBA8FB20059AAB3 /* FoodTravelForOC */,
 				3F98CD791CBA8FB10059AAB3 /* Products */,
 				1132B2563828DB9E3C635143 /* Pods */,
@@ -417,6 +440,7 @@
 				3F074ECA1CBE300000189688 /* Main.storyboard */,
 				3F074EAE1CBD3B8F00189688 /* Discover.storyboard */,
 				3F074EB91CBDE1DF00189688 /* More.storyboard */,
+				3FC5B7971CCFA2BB0007757B /* Images.xcassets */,
 				3F98CD7B1CBA8FB20059AAB3 /* Supporting Files */,
 			);
 			path = FoodTravelForOC;
@@ -438,6 +462,12 @@
 		832CA8518ADF38DEDD3F4C00 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3FC5B7911CCF6F460007757B /* libicucore.tbd */,
+				3FC5B78D1CCF6E3E0007757B /* CoreLocation.framework */,
+				3FC5B78B1CCF6E320007757B /* CoreTelephony.framework */,
+				3FC5B7891CCF6E2A0007757B /* MobileCoreServices.framework */,
+				3FC5B7871CCF6E200007757B /* SystemConfiguration.framework */,
+				3FC5B7851CCF6D790007757B /* AVOSCloud.framework */,
 				3FB11F871CC6A1C100DADE85 /* MapKit.framework */,
 				3F074E5B1CBCA15B00189688 /* CoreData.framework */,
 				6F1D5BCD11C7D15372ADE374 /* Pods_FoodTravelForOC.framework */,
@@ -515,9 +545,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F074EAF1CBD3B8F00189688 /* Discover.storyboard in Resources */,
+				3FC5B7981CCFA2BB0007757B /* Images.xcassets in Resources */,
 				3F074ECB1CBE300000189688 /* Main.storyboard in Resources */,
 				3F074EBA1CBDE1DF00189688 /* More.storyboard in Resources */,
 				3F98CD881CBA8FB20059AAB3 /* Assets.xcassets in Resources */,
+				3FC5B79C1CCFA91B0007757B /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,12 +729,31 @@
 			baseConfigurationReference = 0BB8058A21424F43B4FA4426 /* Pods-FoodTravelForOC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = "FoodTravelForOC/FoodTravelForOC-Prefix.pch";
 				INFOPLIST_FILE = FoodTravelForOC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"DZNEmptyDataSet\"",
+					"-framework",
+					"\"MJExtension\"",
+					"-framework",
+					"\"UITableView_FDTemplateLayoutCell\"",
+					"-lz",
+					"-licucore",
+					"-ObjC",
+					"-lsqlite3",
+					"-lc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qianyuqianxun.FoodTravelForOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -716,12 +767,31 @@
 			baseConfigurationReference = C2F1AF726AA48B47E6365D43 /* Pods-FoodTravelForOC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = "FoodTravelForOC/FoodTravelForOC-Prefix.pch";
 				INFOPLIST_FILE = FoodTravelForOC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"DZNEmptyDataSet\"",
+					"-framework",
+					"\"MJExtension\"",
+					"-framework",
+					"\"UITableView_FDTemplateLayoutCell\"",
+					"-lz",
+					"-licucore",
+					"-ObjC",
+					"-lsqlite3",
+					"-lc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qianyuqianxun.FoodTravelForOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
